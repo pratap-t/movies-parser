@@ -1,5 +1,5 @@
-def imageName = 'mlabouardy/movies-parser'
-def registry = 'https://registry.slowcoder.com'
+def imageName = 'tripuraripratap/movies-parser'
+def registry = 'https://index.docker.io/v1/'
 
 node('workers'){
     stage('Checkout'){
@@ -33,7 +33,7 @@ node('workers'){
     }
 
     stage('Push'){
-        docker.withRegistry(registry, 'registry') {
+        docker.withRegistry(registry, 'docker-credentials') {
             docker.image(imageName).push(commitID())
 
             if (env.BRANCH_NAME == 'develop') {
