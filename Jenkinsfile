@@ -1,7 +1,7 @@
 def imageName = 'tripuraripratap/movies-parser'
 def registry = 'https://index.docker.io/v1/'
 
-node('workers'){
+node('built-in'){
     stage('Checkout'){
         checkout scm
     }
