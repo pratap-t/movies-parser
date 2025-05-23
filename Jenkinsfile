@@ -17,8 +17,6 @@ node('built-in'){
             },
             'Unit Tests': {
                 imageTest.inside{
-                    sh 'go mod download github.com/PuerkitoBio/goquery'
-                    sh 'go mod tidy'
                     sh 'go test'
                 }
             },
