@@ -22,7 +22,7 @@ node('built-in'){
             },
             'Security Tests': {
                 imageTest.inside('-u root:root'){
-                    sh 'nancy sleuth -p /go/src/github/pratap-t/movies-parser/Gopkg.lock 2> /dev/null || true'
+                    sh 'nancy sleuth -p /go/src/github/pratap-t/movies-parser/Gopkg.lock || true'
                 }
             }
         )
