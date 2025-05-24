@@ -12,7 +12,7 @@ RUN wget https://github.com/sonatype-nexus-community/nancy/releases/download/$VE
 RUN go install golang.org/x/lint/golint@latest
 RUN go mod download github.com/PuerkitoBio/goquery 
 RUN go mod tidy
-
+RUN chmod 777 /go/src/github/pratap-t/movies-parser/*.lock
 COPY . .
 
 RUN go get -v 
