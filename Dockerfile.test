@@ -13,6 +13,7 @@ RUN go install golang.org/x/lint/golint@latest
 RUN go mod download github.com/PuerkitoBio/goquery 
 RUN go mod tidy
 RUN chmod 777 /go/src/github/pratap-t/movies-parser/*.lock
+RUN chmod 1777 /tmp
 COPY . .
 
 RUN go get -v 
